@@ -16,7 +16,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 15vh;
+    height: 15vh;
     background-color: rgb(246, 244, 239);
     margin-bottom: 15px;    
 }
@@ -37,12 +37,15 @@ nav{
     display: flex;
     justify-content: space-around;
     width: 30%;
+    align-items: center;
+    height: 100%;
     
     
 }
 
 .nav-links li{
     list-style: none;
+    padding: 100px 0px;
 }
 .burguer{
     display: none;
@@ -198,44 +201,9 @@ iframe{
     }
     
 }
-/*
-.nav-links a:hover {
-    color: red;
-    transition: ;
-}*/
-
-
-.nav-links a {
-    position: relative;
-    text-decoration: none;    
-    font-size: 1rem;
-}
-
-/*nav links animation*/
-.nav-links a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    border-radius: 4px;
-    background-color: rgb(72, 72, 72);
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-}
-  
-.nav-links a:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-}
 
 
 
-.nav-active{
-    transform: translatex(0%);
-}
 /*animation for the nav items 
 when pressing burguer button*/
 @keyframes navLinkFade{
@@ -383,19 +351,16 @@ when pressed it transform into an x*/
     .nav-links{
         position: absolute;
         right: 0px;
-        height: 100vh;
-        
-        top: 10vh;
+        height: 87vh;        
+        top: 15vh;
         background-color: rgb(246, 244, 239);
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40%;
+        width: 50%;
         transform: translatex(100%);
         transition: transform 0.5s ease-in;
-        justify-content: flex-start;      
-        
-
+        justify-content: space-between;
     }
 
     #medium-map{
@@ -408,11 +373,7 @@ when pressed it transform into an x*/
 
     .nav-links li{
         opacity: 0;
-        height: 300px;
-        justify-content: center;
-        align-items: center;
-        padding: 80px 40px;
-        
+               
     }
     
     .burguer{
@@ -491,6 +452,38 @@ when pressed it transform into an x*/
     
 
 
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;    
+    font-size: 1rem;
+}
+
+/*nav links animation*/
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: rgb(72, 72, 72);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+  
+.nav-links a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+
+.nav-active{
+    transform: translatex(0%);
 }
 
 
